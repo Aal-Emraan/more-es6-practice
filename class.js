@@ -17,8 +17,14 @@ class Post extends Support{
         super(name,address);
         this.post = post;
     }
-    work(){
-        console.log(`${this.name} is ${this.post} of our company. He comes from the most beautifull city of bangladesh which is ${this.address}.`)
+    work(title){
+        console.log(`${this.name} is ${this.post} of our company. He comes from the most beautifull city of bangladesh which is ${this.address}. He is leading the designation of ${title} of our company.`)
+    }
+}
+
+class Service extends Support{
+    service(work,price){
+        console.log(`${this.name} is a serviceman of our company. He can do ${work} for you. And it will cost you ${price} taka.`)
     }
 }
 
@@ -32,4 +38,7 @@ console.log(nadir.state('Football'));
 
 const aalEmraan = new Post('Aal Emraan','Sylhet','Chairman');
 console.log(aalEmraan);
-aalEmraan.work();
+aalEmraan.work('CEO');
+
+const aalE = new Service('aal emraan','sylhet');
+aalE.service('software engineering', 300000);
